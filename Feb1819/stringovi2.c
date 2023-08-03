@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
 #include <malloc.h>
 
 /*
@@ -54,7 +53,7 @@ int main() {
 
     int count = 0;
 
-    printf("duzina niza: %d\n", i);
+    //printf("duzina niza: %d\n", i);
     for(int j = 0; j < i; j++){
         //puts(words[j]);
         for(int k = 0, l = k+1; l < strlen(words[j]); l++){
