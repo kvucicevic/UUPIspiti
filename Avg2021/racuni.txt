@@ -1,0 +1,12 @@
+Raiffeisen,Pera Peric,7000,Kraljevo
+Intesa,Mika Mikic,7000,Beograd
+Raiffeisen,Bora Boric,9000,Pancevo
+CreditAgricole,Zika Zikic,2000,Kragujevac
+Komercijalna,Pavle Pavlovic,3000,Uzice
+Raiffeisen,Jana Janic,5000,Kraljevo
+Intesa,Mira Miric,5000,Beograd
+Komercijalna,Jova Jovic,6000,Cacak
+CreditAgricole,Bogdan Bogdanovic,7000,Kragujevac
+Raiffeisen,Misa Misic,4000,Cacak
+Komercijalna,Ruza Ruzic,6000,Uzice
+Intesa,Laza Lazic,3000,Pancevo
