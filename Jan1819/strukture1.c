@@ -108,7 +108,6 @@ void ispisPoGodini(Porodiliste* head, int godina){
     int count = 0;
     while(current->nextB != NULL){
         if(current->godina == godina){
-            //printf("Datum: %d-%d-%d, Broj beba: %d\n", current->dan, current->mesec, current->godina, current->brojBeba);
             count++;
         }
         current = current->nextB;
@@ -132,20 +131,7 @@ void ispisiRekurzivno(Porodiliste* head, int godina, int count){
 
 }
 
-int getIthSmallestYear(Porodiliste* head, int i) {
-    Porodiliste* current = head;
-    int smallestYears[i]; // An array to store the i smallest years
-    for (int j = 0; j < i; j++) {
-        smallestYears[j] = current->godina;
-        current = current->nextB;
-    }
-
-    //insertionSort(&smallestYears); // Sort the array of smallest years
-
-    return smallestYears[i - 1]; // Return the i-th smallest year
-}
-
-void sortChronologiclaly(Porodiliste** headRef, Porodiliste* newNode) {
+void insertChronologiclaly(Porodiliste** headRef, Porodiliste* newNode) {
     Porodiliste* current;
 
     if (*headRef == NULL || (*headRef)->godina > newNode->godina ||
@@ -164,13 +150,13 @@ void sortChronologiclaly(Porodiliste** headRef, Porodiliste* newNode) {
     }
 }
 
-void printSorted(Porodiliste** headRef) {
+void sortChronologically(Porodiliste** headRef) {
     Porodiliste* sorted = NULL;
     Porodiliste* current = *headRef;
 
     while (current != NULL) {
         Porodiliste* next = current->nextB;
-        sortChronologiclaly(&sorted, current);
+        insertChronologiclaly(&sorted, current);
         current = next;
     }
 
@@ -215,7 +201,7 @@ int main(){
         Porodiliste* current = head;
         ispisiRekurzivno(current, godina, 0);
     } else {
-        printSorted(&head);
+        sortChronologically(&head);
     }
 
     return 0;
